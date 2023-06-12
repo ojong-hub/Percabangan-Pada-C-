@@ -1,0 +1,62 @@
+2.	Fall Through Setup
+Merupakan sebuah konstruksi / struktur program di mana dijumpai bahwa satu switch dapat terdiri dari 
+dua atau lebih case pada percabangan switch.
+Contoh :
+
+
+using System;
+
+namespace Buku_CSharp
+{
+    class switch_2
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan Switch - Fall Through Setup");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("");
+
+            Console.WriteLine("Jenis Rumah  : ");
+            Console.WriteLine("Mewah");
+            Console.WriteLine("Minimalis");
+            Console.WriteLine("Cluster");
+            Console.WriteLine("Regency");
+            Console.WriteLine("Real Estate");
+            Console.WriteLine("");
+            Console.Write("Pilihan : ");
+            string rumah = Console.ReadLine().ToLower();
+
+            switch (rumah)
+            {
+               case "Mewah":
+               case "Minimalis":
+               case "CLuster":
+               case "Regency":
+               case "Real Estate":
+                  Console.WriteLine("Rumah " + rumah);
+                    Console.ReadLine();
+                  break;
+               default:
+                  Console.WriteLine("");
+                  Console.WriteLine("Rumah anda : " + rumah);
+                  Console.ReadLine();
+                  break;
+            }
+        }
+    }
+}
+
+Output :
+Contoh Percabangan Switch - Fall Through Setup
+==============================================
+
+Jenis Rumah  :
+Mewah
+Minimalis
+Cluster
+Regency
+Real Estate
+
+Pilihan : regency
+
+Rumah anda : regency
