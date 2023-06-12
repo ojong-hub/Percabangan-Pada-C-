@@ -1,0 +1,94 @@
+3.	Percabangan Switch
+Percabangan jenis mirip dengan percabangan IF, yaitu output program akan dihasilkan dengan kondisi yang sudah ditentukan.
+Berikut adalah sintaks dari fungsi swtich pada C#.
+                    switch ( variabel )
+                    {
+                    case nilai1:
+                    {
+                    statement 1
+                    break;
+                    }
+                    case nilai2:
+                    {
+                    statement 2
+                    break;
+                    }
+                    default:
+                    {
+                    statement 3
+                    break;
+                    }
+                    }
+
+
+Contoh :
+using System;
+
+namespace Buku_CSharp
+{
+    class cabang_3
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan SWITCH");
+            Console.WriteLine("=========================");
+            Console.WriteLine("");
+        
+            int nilai, thn;
+ 
+            nilai = 3;
+            thn = 2022;
+ 
+            switch (nilai)
+            {
+                case 1:{
+                        Console.WriteLine("Bulan ini : Januari Tahun " + thn);
+                        break;}
+                case 2:{
+                    Console.WriteLine("Bulan ini : Februari Tahun " + thn);
+                        break;}
+                case 3:{
+                    Console.WriteLine("Bulan ini : Maret Tahun " + thn);
+                        break;}
+                case 4:{
+                        Console.WriteLine("Bulan ini : April Tahun " + thn);
+                        break;}
+                case 5:{
+                        Console.WriteLine("Bulan ini : Mei Tahun " + thn);
+                        break;}
+                case 6:{
+                        Console.WriteLine("Bulan ini : Juni Tahun " + thn);
+                        break;}
+                case 7:{
+                        Console.WriteLine("Bulan ini : Juli Tahun " + thn);
+                        break;}
+                case 8:{
+                        Console.WriteLine("Bulan ini : Agustus Tahun " + thn);
+                        break;}
+                case 9:{
+                        Console.WriteLine("Bulan ini : September Tahun " + thn);
+                        break;}
+                case 10:{
+                        Console.WriteLine("Bulan ini : Oktober Tahun " + thn);
+                        break;}
+                case 11:{
+                        Console.WriteLine("Bulan ini : November Tahun " + thn);
+                        break;}
+                case 12:{
+                        Console.WriteLine("Bulan ini : Desember Tahun " + thn);
+                        break;}
+                default:{
+                        Console.WriteLine("Bulan ?");
+                        break;}
+            }
+            Console.ReadLine();
+        }
+    }
+}
+        
+        
+Output :
+Contoh Percabangan SWITCH
+=========================
+
+Bulan ini : Maret Tahun 2022
