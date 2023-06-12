@@ -1,0 +1,54 @@
+1.  Percabangan IF
+Merupakan suatu statement yang digunakan untuk mengeksekusi kode program jika kondisi tertentu terpenuhi. 
+Misalnya dalam hal melakukan operasi pembagian, program harus mencek terlebih dahulu apakah pembagi bernilai 0 atau tidak 
+agar tidak terjadi runtime error.
+Format sintaks dari percabangan if adalah seperti berikut ini.
+                        if ( kondisi )
+                        {
+                        statement 1
+                        }
+                        Else
+                        {
+                        statement 2
+                        }
+
+Keterangan :
+kondisi  : bagian yang harus diisi dengan nilai true untuk menghasilkan statement 1 dan apabila bernilai false,
+maka menghasilkan statement 2.
+
+Contoh :
+using System;
+
+namespace Buku_CSharp
+{
+    class cabang_1
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan IF");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("");
+
+            Console.Write("Masukkan nilai a : "); 
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Masukkan nilai b : "); 
+            int b = int.Parse(Console.ReadLine());
+            if (b != 0)
+            {
+                double c = a / b;
+                Console.WriteLine("");
+                Console.WriteLine("a / b = " +  c);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+Output :
+Contoh Percabangan IF
+~~~~~~~~~~~~~~~~~~~~~
+
+Masukkan nilai a : 1234
+Masukkan nilai b : 13
+
+a / b = 94
