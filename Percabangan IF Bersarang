@@ -1,0 +1,155 @@
+4.	Percabangan If Bersarang
+Merupakan suatu kondisi yang ditemukan pada struktur program dengan beberapa pilihan keputusan/proses selanjutnya.
+Berikut adalah sintaksnya.
+                                if (kondisi_1)
+                                {
+                                  Statement_1;
+                                }
+                                else if (kondisi-2)
+                                  Statement_2;
+                                }
+                                ….
+                                else if (kondisi_n)
+                                {
+                                  Statement_n;
+                                }
+                                else
+                                {
+                                  Statement_lain;
+                                }
+
+Keterangan :
+•	Jika kondisi_1 terpenuhi, maka Statement_1 akan di eksekusi ,
+•	Jika kondisi_1 tidak terpenuhi, maka proses berikutnya adalah dengan mengecek kondisi_2 sampai  kondisi_n. 
+•	Jika kondisi_1 hingga kondisi_n tidak terpenuhi, maka Statement_lain yang akan di eksekusi.
+
+Contoh :
+using System;
+
+namespace Buku_CSharp
+{
+    class cabang_4
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan IF Bersarang");
+            Console.WriteLine("===============================");
+            Console.WriteLine("");
+
+            long harga = 0;
+            char KodeBaju, Ukuran;
+            string Merk;
+
+            Console.Write("Masukkan Kode Baju   : ");
+            KodeBaju = char.Parse(Console.ReadLine());
+
+            Console.Write("Masukkan Ukuran Baju   : ");
+            Ukuran = char.Parse(Console.ReadLine());
+
+            if (KodeBaju == '1')
+            {
+                Merk = "IMP";
+                if (Ukuran == 'S' || Ukuran == 's')
+                {
+                    harga = 200000;
+                }
+                else if (Ukuran == 'M' || Ukuran == 'm')
+                {
+                    harga = 220000;
+                }
+                else
+                {
+                    harga = 250000;
+                }
+            }
+            else if (KodeBaju == '2')
+            {
+                Merk = "Prada";
+                if (Ukuran == 'S' || Ukuran == 's')
+                {
+                    harga = 150000;
+                }
+                else if (Ukuran == 'M' || Ukuran == 'm')
+                {
+                    harga = 160000;
+                }
+                else
+                {
+                    harga = 170000;
+                }
+            }
+            else if (KodeBaju == '3')
+            {
+                Merk = "Gucci";
+                if (Ukuran == 'S' || Ukuran == 's')
+                {
+                    harga = 200000;
+                }
+                else if (Ukuran == 'M' || Ukuran == 'm')
+                {
+                    harga = 200000;
+                }
+                else
+                {
+                    harga = 200000;
+                }
+            }
+            else if (KodeBaju == '4')
+            {
+                Merk = "Louis Vuitton";
+                if (Ukuran == 'S' || Ukuran == 's')
+                {
+                    harga = 300000;
+                }
+                else if (Ukuran == 'M' || Ukuran == 'm')
+                {
+                    harga = 300000;
+                }
+                else
+                {
+                    harga = 350000;
+                }
+            }
+            else if (KodeBaju == '5')
+            {
+                Merk = "Kick Denim";
+                if (Ukuran == 'S' || Ukuran == 's')
+                {
+                    harga = 100000;
+                }
+                else if (Ukuran == 'M' || Ukuran == 'm')
+                {
+                    harga = 120000;
+                }
+                else
+                {
+                    harga = 130000;
+                }
+            }
+            else
+            {
+                Merk = "Error";
+                Console.WriteLine("Kode Baju Salah....");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("Output : ");
+            Console.WriteLine("Merek Baju  = " + Merk);
+            Console.WriteLine("Ukuran Baju = " + Ukuran);
+            Console.WriteLine("Harga Baju  = " + harga);
+            Console.ReadLine();
+        }
+    }
+}
+
+Output :
+Contoh Percabangan IF Bersarang
+===============================
+
+Masukkan Kode Baju   : 3
+Masukkan Ukuran Baju   : M
+
+Output :
+Merek Baju  = Gucci
+Ukuran Baju = M
+Harga Baju  = 200000
