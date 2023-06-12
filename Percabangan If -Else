@@ -1,0 +1,60 @@
+2.  Percabangan If - Else
+Pada percabangan ini, selain menentukan proses selanjutnya jika suatu kondisi terpenuhi, programmer dapat 
+pula menentukan proses selanjutnya jika kondisi tidak terpenuhi. 
+Contoh :
+
+using System;
+
+namespace Buku_CSharp
+{
+    class cabang_2
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan IF - ELSE");
+            Console.WriteLine("============================");
+            Console.WriteLine("");
+
+            int nilai = 0;
+            Console.Write("Masukan sebuah angka : ");
+            nilai = int.Parse(Console.ReadLine());
+            int hasil = nilai % 2;
+            if (hasil == 0)
+            {
+                
+                Console.Write("Angka " + nilai + " adalah bilangan genap");
+            }
+            else
+            {
+                Console.WriteLine("");
+                Console.Write("Angka " + nilai + " adalah bilangan ganjil");
+            }
+
+            int sisa1, sisa2;
+            sisa1 = nilai / nilai;
+            sisa2 = nilai / 1;
+            if (sisa1 == 1)  {
+                Console.WriteLine("");
+                 Console.WriteLine("Angka " + nilai + " adalah bilangan prima");
+            }
+            else
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Angka " + nilai + " bukan bilangan prima");
+            }
+            
+            Console.ReadLine();
+
+        }
+
+    }
+}
+
+Output :
+Contoh Percabangan IF - ELSE
+============================
+
+Masukan sebuah angka : 17
+
+Angka 17 adalah bilangan ganjil
+Angka 17 adalah bilangan prima
