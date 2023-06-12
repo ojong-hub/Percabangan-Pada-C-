@@ -1,0 +1,74 @@
+1.	Penggunaan Keyword Goto 
+goto case merupakan sebuah keyword yang digunakan untuk melompat dari satu case  ke case yang lain pada percabangan switch.
+Contoh :
+
+
+using System;
+
+namespace Buku_CSharp
+{
+    class switch_1
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contoh Percabangan Switch - Goto Case");
+            Console.WriteLine("=====================================");
+            Console.WriteLine("");
+
+            Console.WriteLine("Jenis Motor  : ");
+            Console.WriteLine("1. Honda");
+            Console.WriteLine("2. Yamaha");
+            Console.WriteLine("3. Suzuki");
+            Console.WriteLine("4. Kawasaki");
+            Console.Write("Pilih salah satu : ");
+            string motor = Console.ReadLine();
+            int angka = int.Parse(motor);
+            int harga = 0;
+
+            switch (angka)
+            {
+                case 1:
+                    harga += 10000000;
+                    // Keluar dari pernyataan switch
+                    break;
+                case 2:
+                    harga += 2000000;
+                    // lompat ke case 1
+                    goto case 1;
+                case 3:
+                    harga += 3000000;
+                    // lompat ke case 1
+                    goto case 1;
+                case 4:
+                    harga += 4000000;
+                    // lompat ke case 1
+                    goto case 1;
+                default:
+                    Console.WriteLine("Pilihan salah....");
+                    // Keluar dari pernyataan switch
+                    break;
+            }
+
+            if (harga != 0)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Harga motor = Rp. " + harga);
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+Output :
+Contoh Percabangan Switch - Goto Case
+=====================================
+
+Jenis Motor  :
+1. Honda
+2. Yamaha
+3. Suzuki
+4. Kawasaki
+Pilih salah satu : 2
+
+Harga motor = Rp. 12000000
